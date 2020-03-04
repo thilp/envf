@@ -1,6 +1,6 @@
 [package]
 name = "envf"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Thibaut Le Page <thilp@thilp.net>"]
 edition = "2018"
 

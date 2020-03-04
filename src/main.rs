@@ -24,6 +24,7 @@ fn print_usage() {
     eprintln!("  -s          Silence warnings about unprocessable files.");
     eprintln!("  -h, --help  Display this message.");
     eprintln!("");
+    eprintln!("Version: 1.0.0");
     eprintln!("Source: https://github.com/thilp/envf");
 }
 
