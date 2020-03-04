@@ -20,6 +20,7 @@ fn print_usage() {
     eprintln!("Options:");
     eprintln!("  -f FILE     Add values read from FILE to the environment in which COMMAND is run.");
     eprintln!("              FILE is a TOML (https://github.com/toml-lang/toml) table of scalar values.");
+    eprintln!("              Default: .env.toml");
     eprintln!("  -s          Silence warnings about unprocessable files.");
     eprintln!("  -h, --help  Display this message.");
     eprintln!("");
@@ -114,6 +115,9 @@ fn parse_args(args: impl Iterator<Item = String>) -> ArgParseResult {
             }
         }
         args.next();
+    }
+    if files.len() == 0 {
+        files.push(".env.toml".to_string());
     }
     let cmd: Vec<String> = args.collect();
     if cmd.len() == 0 {
